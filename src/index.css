@@ -69,3 +69,25 @@ nav{
 
 
 }
+.grey{
+  color: gray;
+}
+
+.card{
+  width: 175px;
+  font-size: 12px;
+}
+
+.katie{
+  width: 100%;
+  border-radius: 9px;
+}
+
+.star{
+  height: 14px;;
+}
+
+.cardstack{
+  display: flex;
+  align-items: center;
+}
