@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  font-family: "poppins", sans-serif;
 }
 
 
@@ -26,8 +27,15 @@ nav{
 
 }
 
+.content{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
 .image{
-  width: 395.91px;
+  max-width: 400px;
+  align-self: center;
   height: 232px;
   top: 96px;
   left: 77px;
@@ -42,12 +50,14 @@ nav{
   font-weight: 600;
   line-height: 39.6px;
   font-size: 36px;
-  font-family: "poppins", sans-serif;
+  margin-bottom: 25px;
+  
 
 }
 
 .content > p{
   padding: 30px 0px;
+  margin: 0px;
   width: 320px;
   height: 56px;
   top: 416px;
