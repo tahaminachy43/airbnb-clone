@@ -1,21 +1,36 @@
 
 import star from "./assets/star.png"
-export default function Card(props){
-    console.log(props)
+import PropTypes from 'prop-types';
+
+
+function Card(props){
     return(
         <div className="card">
             
-            <img src= {`../src/assets/${this.props.img}`} alt = "katie" className="katie"/>
-            <div className="cardstack">
-                <img src= {star} alt="star" className="star"/>
-                <span> {this.props.rating}</span>
-                <span className="grey">({this.props.reviewCount}) . </span>
-                <span className="grey">{this.props.location} </span>
+            <img src= {props.img} alt = "katie" className="card--image"/>
+            <div className="card--stats">
+                <img src= {star} alt="star" className="card--star"/>
+                <span> {props.rating}</span>
+                <span className="gray">({props.reviewCount}) . </span>
+                <span className="gray">{props.location} </span>
 
             </div>
-            <p> {this.props.title} </p>
-            <p> From ${this.props.price} / person</p>
+            <p className="card--title">  {props.title} </p>
+            <p className = "card--price"> From ${props.price} / person</p>
 
         </div>
     )
+
+
 }
+
+Card.propTypes = {
+    img: PropTypes.string.isRequired,
+    rating: PropTypes.number.isRequired,
+    reviewCount: PropTypes.number.isRequired,
+    location: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+};
+
+export default Card

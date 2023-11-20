@@ -10,15 +10,16 @@ import data from "./data";
 
 export default function App() {
   const cards = data.map((item) => {
-    console.log(item);
+    
     return(<Card
-    Key = {item.id}
-    img = {item.coverImg}
-    rating = {item.stats.rating}
-    reviewers = {item.stats.reviewCount}
-    country = {item.location}
-    title = {item.location}
-    price = {item.price}
+      Key = {item.id}
+      img = {item.img}
+      rating = {item.stats.rating}
+      reviewCount = {item.stats.reviewCount}
+      location = {item.location}
+      title = {item.title}
+      price = {item.price}
+      openSpots = {item.openSpots}
     />
     
     );
@@ -31,7 +32,9 @@ export default function App() {
   return (
     <div>
       <Nav/>
-      {cards}
+      <section className="cards-list">
+        {cards}
+      </section>
 
     </div>
   )
