@@ -124,12 +124,12 @@ section {
   padding: 20px;
 }
 
-.hero {
+.content {
   display: flex;
   flex-direction: column;
 }
 
-.hero--photo {
+.image {
   max-width: 400px;
   align-self: center;
 }
