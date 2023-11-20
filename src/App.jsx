@@ -8,7 +8,8 @@ export default function App() {
     
     return(<Card
       Key = {item.id}
-      item = {item}
+      
+      {...item}
     /> 
     );
   })
