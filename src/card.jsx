@@ -1,20 +1,20 @@
-import katie from "./assets/katie-zaferes.png"
-import star from "./assets/star.png"
+/* eslint-disable react/prop-types */
 
-
-export default function Card(){
+export default function Card(props){
+    console.log(props)
     return(
         <div className="card">
-            <img src= {katie} alt = "katie" className="katie"/>
+            
+            <img src= {props.img} alt = "katie" className="katie"/>
             <div className="cardstack">
-                <img src={star} alt="star" className="star"/>
-                <span> 5.0</span>
-                <span className="grey">(6) . </span>
-                <span className="grey">USA </span>
+                <img src= {props.img2} alt="star" className="star"/>
+                <span> {props.rating}</span>
+                <span className="grey">({props.reviewers}) . </span>
+                <span className="grey">{props.country} </span>
 
             </div>
-            <p> Life lessons with Katie Zaferes </p>
-            <p> From $136 / person</p>
+            <p> {props.title} </p>
+            <p> From ${props.price} / person</p>
 
         </div>
     )
